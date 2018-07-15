@@ -23,6 +23,12 @@ public class demo1
  			 */
  			Base b=(Base)a.newInstance();
  			//为什么打印的是 Sub？
+ 			/*
+ 			 * 子类强转为父类，向上转换
+ 			 * 通过向上转换，我们能够在编写程序时采用通用程序设计的思想，
+ 			 * 在需要使用子类对象的时候，通过把变量定义为父类型，我们可以通过一个变量，使用该父类型的所有子类型实例
+ 			 * 子类可以转换为父类，即父类引用指向子类对象。引用的属性是父类的，方法若果被子类重写则是子类的方法。
+ 			 */
  			b.f();
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -53,6 +59,19 @@ class Sub extends Base
 	public void f()
 	{
 		System.out.println("Sub");
+	}
+	
+}
+/**
+ * 
+ * @author yanyu
+ * 测试类，测试子类与父类的关系
+ */
+class Sub2 extends Base
+{
+	public void f()
+	{
+		System.out.println("Sub2");
 	}
 	
 }
