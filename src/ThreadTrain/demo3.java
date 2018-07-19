@@ -3,6 +3,11 @@ package ThreadTrain;
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
+/**
+ * 创建线程的第三种方法，使用Callable和Future创建线程
+ * @author yanyu
+ *
+ */
 public class demo3 
 {
 	public static void main(String[] args)
@@ -12,7 +17,7 @@ public class demo3
 		//先使用Lambda表达式创建Callable<Integer>对象  1
 		//使用Futuretask来包装Callable对象
 		FutureTask<Integer> task=new FutureTask<Integer>((Callable<Integer>)()->{
-			//这里的方法相当于call()方法    1 call()方法可以由返回值  2 call()方法也可以声明抛出异常 
+			//这里的方法相当于call()方法    1 call()方法可以有返回值  2 call()方法也可以声明抛出异常 
 			int i=0;
 			for(;i<100;i++)
 			{

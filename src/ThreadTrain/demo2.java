@@ -1,5 +1,6 @@
 package ThreadTrain;
 /*
+ * 创建线程的第二种方法
  * 实现Runnable接口创建线程
  */
 public class demo2 implements Runnable 
