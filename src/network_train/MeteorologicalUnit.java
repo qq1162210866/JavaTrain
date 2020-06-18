@@ -9,9 +9,21 @@ package network_train;
  */
 public class MeteorologicalUnit {
 
+    /**
+     * 气象参数Code
+     */
     private String ElementCode;
+    /**
+     * 气象参数名称
+     */
     private String ElementName;
+    /**
+     * 气象参数值
+     */
     private String ElementValue;
+    /**
+     * 气象参数单位
+     */
     private String ElementUnit;
 
     public String getElementCode() {
