@@ -10,12 +10,22 @@ import network_train.ARSwitch;
 
 /**
  * TCPServerHandler.java
- * Description:
+ * Description: 主要的业务处理类
  *
  * @author Peng Shiquan
  * @date 2020/6/18
  */
 public class TCPServerHandler extends ChannelInboundHandlerAdapter {
+
+    /**
+     * Description: 通道的读取操作方法
+     *
+     * @param ctx
+     * @param msg
+     * @return void
+     * @Author: Peng Shiquan
+     * @Date: 2020/6/19
+     */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         try {
@@ -27,10 +37,21 @@ public class TCPServerHandler extends ChannelInboundHandlerAdapter {
                 System.err.println("转换为pojo对象" + arPojo.toString());
             }
         } finally {
+            // 释放msg
             ReferenceCountUtil.release(msg);
         }
     }
 
+
+    /**
+     * Description:  异常捕获
+     *
+     * @param ctx
+     * @param cause
+     * @return void
+     * @Author: Peng Shiquan
+     * @Date: 2020/6/19
+     */
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         cause.printStackTrace();
