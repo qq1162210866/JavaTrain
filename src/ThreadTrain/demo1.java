@@ -7,6 +7,7 @@ public class demo1 extends Thread
 {
 	private int i;//计数器
 	//run方法就是线程执行体
+	@Override
 	public void run()
 	{
 		for(;i<100;i++)
