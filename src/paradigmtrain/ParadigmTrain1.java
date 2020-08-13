@@ -1,5 +1,6 @@
 package paradigmtrain;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
@@ -15,6 +16,10 @@ public class ParadigmTrain1 {
         Pair<LocalDate> result = minmax(dates);
         System.err.println(result.getFirst());
         System.err.println(result.getSecond());
+        /**
+         * 这里可以通过参数的形式来推断出范型的类型，所以不需要输入范型的类型参数
+         */
+        new Pair<>("haha", "hehe");
     }
 
     /**
@@ -25,7 +30,7 @@ public class ParadigmTrain1 {
      * @Author: Peng Shiquan
      * @Date: 2020/5/15
      */
-    public static <T extends Comparable> Pair<T> minmax(T[] a) {
+    public static <T extends Comparable & Serializable> Pair<T> minmax(T[] a) {
         /**
          * 第一个范型是对参数进行限制，第二哥是返回的类型
          */
@@ -61,9 +66,17 @@ class Pair<T> {
         second = null;
     }
 
+    public void setSecond(T second) {
+        this.second = second;
+    }
+
     public Pair(T first, T second) {
         this.first = first;
         this.second = second;
+    }
+
+    public void setFirst(T first) {
+        this.first = first;
     }
 
     public T getFirst() {
