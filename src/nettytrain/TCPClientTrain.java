@@ -31,11 +31,10 @@ public class TCPClientTrain {
                             socketChannel.pipeline().addLast(new TCPClientHandler());
                         }
                     });
-            //发起异步连接操作
-            System.err.println("host:" + host + "port:" + port);
+            //发起异步连接操作，同步阻等待结果
             ChannelFuture channelFuture = bootstrap.connect(host, port).sync();
             //等待客户端链路关闭
-            channelFuture.channel().close().sync();
+            channelFuture.channel().closeFuture().sync();
         } finally {
             //释放NIO线程组
             eventLoopGroup.shutdownGracefully();
@@ -52,6 +51,6 @@ public class TCPClientTrain {
                 System.err.println(e);
             }
         }
-        new TCPClientTrain().connect(port, "127.0.0.1");
+        new TCPClientTrain().connect(8008, "192.168.1.166");
     }
 }
