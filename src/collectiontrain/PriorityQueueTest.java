@@ -46,7 +46,7 @@ public class PriorityQueueTest {
 
         stringStringMap.put("1", "AA");
         System.err.println(stringStringMap.get("1"));
-        IdentityHashMap
+        //IdentityHashMap
 
         /**
          * 还是需要再了解和使用lambda表达式
