@@ -26,8 +26,23 @@ public class test {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) {
-        socketClient();
+        byte result = addressSwitch(23, 2);
+        System.err.println(result);
+    }
+
+    public static byte parameterSwitch(int brightness, int colour) {
+        brightness = (brightness << 5) & 0xE0;
+        colour = (colour << 2) & 0xC;
+        return (byte) (brightness | colour);
+    }
+
+    public static byte addressSwitch(int address, int time) {
+        address = (address << 3) & 0xF8;
+        time = (time << 1) & 0x6;
+        return (byte) (address | time);
 
     }
+
 }
