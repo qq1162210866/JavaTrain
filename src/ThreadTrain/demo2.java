@@ -10,13 +10,11 @@ public class demo2 implements Runnable
 	@Override
 	public void run() 
 	{
-		// TODO Auto-generated method stub
 		for(;i<100;i++)
 		{
 			//当实现Runnable接口时，只能使用Thread.currentThread().getName()获得当前线程
 			System.out.println(Thread.currentThread().getName()+" "+i);
 		}
-		
 	}
 	public static void main(String[] args)
 	{
@@ -36,5 +34,4 @@ public class demo2 implements Runnable
 			}
 		}
 	}
-	
 }

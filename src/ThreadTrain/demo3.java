@@ -35,7 +35,6 @@ public class demo3
 			{
 				//实质还是Callable对象创建线程的，执行者还是Thread
 				new Thread(task,"有返回值的线程").start();
-				
 			}
 		}
 		//也可以获取异常
