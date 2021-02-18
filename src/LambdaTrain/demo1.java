@@ -34,7 +34,7 @@ public class demo1
 			System.out.println("直升机飞行平稳");
 		});
 		//代码只有一句，可以省略“{}”,同时也可以省略return关键字 a+b是返回值
-		demo1.test((a,b)->a+b);
+		demo1.test(Integer::sum);
 		
 	}
 
@@ -42,14 +42,17 @@ public class demo1
 /*
  * 测试使用的接口,只有一个抽象方法的接口（函数式接口）
  */
+@FunctionalInterface
 interface Eatable
 {
 	void taste();
 }
+@FunctionalInterface
 interface Flyable
 {
 	void fly(String weather);
 }
+@FunctionalInterface
 interface Addable
 {
 	int add(int a,int b);

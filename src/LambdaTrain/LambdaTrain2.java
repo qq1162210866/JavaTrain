@@ -25,7 +25,7 @@ public class LambdaTrain2 {
         return s.toString();
     }
 
-    static <T> String ret() {
+    static String ret() {
         return "hello";
     }
 
@@ -72,17 +72,17 @@ public class LambdaTrain2 {
         System.out.println("这是调用Function的函数式接口，" + function.apply(5));
 
         /**
-         * 普通的lambda表达式，没有使用双冒号
+         * 普通的lambda表达式，没有使用双冒号.
          * Consumer支持参数的输入，没有输出。
          */
         Consumer<String> consumer = size -> LambdaTrain2.getSize(size);
         System.out.printf("这是普通的lambda表达式,");
         consumer.accept("1111111");
         /**
-         * 也可以写成以下的形式
+         * 也可以写成以下的形式,方法引用
          */
         Consumer<String> consumer1 = LambdaTrain2::getSize;
-        System.out.printf("这是双冒号的lambda表达式,");
+        System.out.println("这是双冒号的lambda表达式,");
         consumer1.accept("11111111111111");
     }
 }

@@ -60,14 +60,14 @@ public class LambdaTrain1 {
      */
     public void runnableTrain() {
         Runnable runnable = () -> System.out.println("这是lambda语法启动的线程");
-        runnable.run();
+        new Thread(runnable, "线程1").start();
         Runnable runnable1 = new Runnable() {
             @Override
             public void run() {
                 System.out.println("这是正常启动的线程");
             }
         };
-        runnable1.run();
+        new Thread(runnable1, "线程2").start();
     }
 
     /**
