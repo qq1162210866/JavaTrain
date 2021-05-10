@@ -1,5 +1,8 @@
 package paradigmtrain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * ParadigmErrorTrain.java
  * Description:  范型错误的示范
@@ -14,6 +17,11 @@ public class ParadigmErrorTrain {
         //不能实例化参数化类型的数组
         //Pair<String>[] table = new Pair<String>[10];
         //不能构造范型数组
+
+        List list =  new ArrayList();
+        list.add(3);
+        list.add("aa");
+        System.err.println(list);
 
     }
 }

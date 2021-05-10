@@ -32,7 +32,7 @@ public class ParadigmTrain1 {
      */
     public static <T extends Comparable & Serializable> Pair<T> minmax(T[] a) {
         /**
-         * 第一个范型是对参数进行限制，第二哥是返回的类型
+         * 第一个范型是对参数进行限制，第二个是返回的类型
          */
         if ((a == null) || a.length == 0) return null;
         T min = a[0];
