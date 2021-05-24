@@ -2,6 +2,7 @@ package paradigmtrain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
 
 /**
  * ParadigmTrain1.java
@@ -47,6 +48,11 @@ public class ParadigmTrain1 {
         }
         return new Pair<>(min, max);
     }
+
+    //限定列表中如果存在类，必须为限定列表的第一个
+//    public static <T extends Comparable & Date> void test() {
+//
+//    }
 }
 
 /**
