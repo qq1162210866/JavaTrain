@@ -1,5 +1,14 @@
 package syncTrain;
 
+import com.sun.tools.javac.util.IntHashTable;
+
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * BankMain.java
  * Description: 银行测试的主方法
@@ -30,6 +39,7 @@ public class BankMain {
                 }
             };
             Thread t = new Thread(r);
+            float []f[]  =new float[2][];
             t.start();
         }
 

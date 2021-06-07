@@ -24,7 +24,6 @@ public class InternalTrainDemo1 {
      * @Date: 2019-08-15
      */
     public static void main(String[] args) {
-
         TalkingClock talkingClock = new TalkingClock(2000, true);
         talkingClock.start();
         JOptionPane.showMessageDialog(null, "Quit program?");

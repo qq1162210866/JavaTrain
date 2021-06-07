@@ -2,14 +2,10 @@ package internaltrain;
 
 /**
  * InternalTrainDemo4.java
- * Description:内部类的语法练习
+ * Description:  内部类的语法练习
  *
  * @author Peng Shiquan
- * Copyright  2018-2019  创捷运维智能科技有限公司
- * All rights reserved.
- * @version: 1.0
- * Reversion:
- * 1.0 - 新建
+ * @date 2021/6/4
  */
 public class InternalTrainDemo4 {
     String name = "李四";
@@ -18,7 +14,7 @@ public class InternalTrainDemo4 {
     public void start(int a, int b) {
         class interMethodClass {
             public void test() {
-                System.err.println("a: "+a);
+                System.err.println("a: " + a);
             }
         }
     }

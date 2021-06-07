@@ -2,7 +2,7 @@ package syncTrain;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
+import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
@@ -93,11 +93,8 @@ public class BlockingQueueTrain {
                     //想法是测试队列的公平性，但是测试结果和预想的不太一样
                     //System.err.println(Thread.currentThread().getId());
                 }
-
             }
-
         }
-
     }
 
 }
